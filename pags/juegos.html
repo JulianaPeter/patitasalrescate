@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B3ftar</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>B3FTAR</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pags/sobremi.html">Sobre mi</a></li>
+        
+                <li><a href="./juegos.html">Juegos</a></li>
+                <li><a href="../pags/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="modonegro">
+          <button onclick="toggleDarkMode()">
+            <img id="dark-mode-icon" src="../img/5262027.png" alt="Icono modo oscuro">
+        </button>
+    </div>
+
+    </header>
+
+    
+    <div class="catalogo">
+        <h2>Catálogo de Juegos</h2>
+        <ul id="lista-juegos">
+            <!-- Los juegos se agregarán dinámicamente aquí -->
+        </ul>
+    </div>
+    <div class="sugerirjuego">
+    <h2>Sugerir un Juego</h2>
+</div>
+    <form id="sugerirJuegoForm">
+        <img src="../img/wwww.webp" alt="Descripción de la imagen">
+        <label for="nombreJuego">Nombre del Juego:</label>
+        <input type="text" id="nombreJuego" required>
+        <button type="submit">Enviar Sugerencia</button>
+    </form>
+    <p id="mensajeExito" class="hidden"></p>
+ <footer>
+        <div class="container">
+            <p>&copy; 2024 Juliana Peter</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
