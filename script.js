@@ -68,7 +68,7 @@ var videojuegos = [
     nombre: "Resident Evil 5",
     descripcion: "Resident Evil 5 es un videojuego de acción y terror desarrollado y publicado por Capcom. Es la séptima entrega principal de la serie Resident Evil.",
     lanzamiento: "5 de marzo de 2009",
-    imagen: "./img/3333.webp" // Cambiar la ruta de la imagen si es necesario
+    imagen: "/img/3333.webp" // Cambiar la ruta de la imagen si es necesario
   },
   {
     nombre: "Shadow Of The Colossus",
