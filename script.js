@@ -1,26 +1,26 @@
-// Función para pedir el nombre del usuario
+
 function pedirNombre() {
   var nombre = prompt("Por favor, ingrese su nombre:");
 
   if (nombre !== null && nombre !== "") {
-      // Guardar el nombre en el almacenamiento local
+    
       localStorage.setItem("nombreUsuario", nombre);
       return nombre;
   } else {
-      // Si no se ingresó un nombre, volver a pedirlo
+    
       return pedirNombre();
   }
 }
 
-// Verificar si el nombre del usuario ya está guardado en el almacenamiento local
+
 var nombreGuardado = localStorage.getItem("nombreUsuario");
 
-// Si no hay un nombre guardado, pedir al usuario que ingrese su nombre
+
 if (!nombreGuardado) {
   nombreGuardado = pedirNombre();
 }
 
-// Mostrar un saludo personalizado
+
 alert("Hola, " + nombreGuardado + "! Bienvenido/a.");
 
 // Array de mensajes de bienvenida
@@ -33,13 +33,13 @@ var mensajesBienvenida = [
   "¡Hola! ¡Qué bueno verte por aquí!"
 ];
 
-// Función para obtener un mensaje aleatorio del array
+
 function obtenerMensajeAleatorio() {
   var indice = Math.floor(Math.random() * mensajesBienvenida.length);
   return mensajesBienvenida[indice];
 }
 
-// Actualizar el mensaje de bienvenida en el párrafo debajo del banner
+
 document.getElementById("mensajeBienvenida").textContent = obtenerMensajeAleatorio();
 
 
@@ -68,31 +68,31 @@ var videojuegos = [
     nombre: "Resident Evil 5",
     descripcion: "Resident Evil 5 es un videojuego de acción y terror desarrollado y publicado por Capcom. Es la séptima entrega principal de la serie Resident Evil.",
     lanzamiento: "5 de marzo de 2009",
-    imagen: "/img/3333.webp" // Cambiar la ruta de la imagen si es necesario
+    imagen: "./img/3333.webp" 
   },
   {
     nombre: "Shadow Of The Colossus",
     descripcion: "Shadow of the Colossus es un videojuego de acción y aventuras desarrollado por Team Ico y publicado por Sony Computer Entertainment.",
     lanzamiento: "18 de octubre de 2005",
-    imagen: "./img/6666.jpg" // Cambiar la ruta de la imagen si es necesario
+    imagen: "./img/6666.jpg" 
   },
   {
     nombre: "Fallout 4",
     descripcion: "Fallout 4 es un juego de rol de acción desarrollado por Bethesda Game Studios y publicado por Bethesda Softworks.",
     lanzamiento: "10 de noviembre de 2015",
-    imagen: "./img/22.png" // Cambiar la ruta de la imagen si es necesario
+    imagen: "./img/22.png" 
   },
   {
     nombre: "Life Is Strange",
     descripcion: "Life is Strange es un videojuego de aventura desarrollado por Dontnod Entertainment y publicado por Square Enix. ",
     lanzamiento: "30 de enero de 2015",
-    imagen: "./img/55.png" // Cambiar la ruta de la imagen si es necesario
+    imagen: "./img/55.png" 
   },
  
-  // Puedes agregar más juegos aquí
+
 ];
 
-// Función para agregar juegos al DOM
+
 function agregarJuegos() {
   var appContainer = document.getElementById("app");
   appContainer.innerHTML = ""; // Limpiar contenido anterior
@@ -122,13 +122,13 @@ function agregarJuegos() {
   });
 }
 
-// Mostrar u ocultar la lista de juegos al hacer clic en el botón
+
 var botonMostrar = document.getElementById("mostrarJuegos");
 botonMostrar.addEventListener("click", function() {
   var listaJuegos = document.getElementById("app");
   if (listaJuegos.style.display === "none") {
     listaJuegos.style.display = "block";
-    agregarJuegos(); // Mostrar la lista de juegos al hacer clic en el botón
+    agregarJuegos(); 
   } else {
     listaJuegos.style.display = "none";
   }
@@ -138,41 +138,41 @@ botonMostrar.addEventListener("click", function() {
 // Selecciona el elemento de texto del banner
 var bannerText = document.querySelector(".bannerText");
 
-// Define la función para animar el texto
+
 function animateText() {
-  // Define la posición inicial del texto
-  var initialPosition = -10; // Supongamos que el texto comienza ligeramente arriba de su posición normal
+
+  var initialPosition = -10; 
   
-  // Define la posición final del texto
-  var finalPosition = 10; // Supongamos que el texto se mueve ligeramente hacia abajo
+ 
+  var finalPosition = 10; 
   
-  // Define la velocidad de la animación (en milisegundos)
+
   var animationDuration = 4000; // 4 segundos
   
-  // Define la cantidad de pasos en la animación
+  
   var steps = 100; // 100 pasos
   
-  // Calcula la cantidad de píxeles que el texto se moverá en cada paso
+  
   var stepSize = (finalPosition - initialPosition) / steps;
   
-  // Inicia un bucle de animación utilizando setInterval
+
   var currentPosition = initialPosition;
   var goingDown = true;
   setInterval(function() {
-    // Calcula la nueva posición del texto para este paso
+
     currentPosition += goingDown ? stepSize : -stepSize;
     
-    // Si el texto llega a la posición final, cambia la dirección
+    
     if (currentPosition >= finalPosition || currentPosition <= initialPosition) {
       goingDown = !goingDown;
     }
     
-    // Aplica la transformación CSS al elemento de texto
+    
     bannerText.style.transform = "translate(-50%, " + currentPosition + "px)";
   }, animationDuration / steps);
 }
 
-// Llama a la función para iniciar la animación
+
 animateText();
 
 
@@ -183,10 +183,9 @@ animateText();
 
 
 
-// Obtenemos el botón de "Modo Oscuro"
 const modoOscuroBtn = document.getElementById("modoOscuroBtn");
 
-// Escuchamos el evento de clic en el botón de "Modo Oscuro"
+
 modoOscuroBtn.addEventListener("click", function() {
     // Toggle dark mode class en el body
     document.body.classList.toggle("dark-mode");
