@@ -48,7 +48,7 @@ document.getElementById("mensajeBienvenida").textContent = obtenerMensajeAleator
 
 
 // Cambiar imágenes del banner
-var images = ["../img/5555.jpg", "../img/33.png", "../img/3.jpg"];
+var images = ["./img/5555.jpg", "./img/33.png", "./img/3.jpg"];
 var currentIndex = 0;
 
 function changeBanner() {
