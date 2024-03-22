@@ -490,7 +490,7 @@ button:hover {
   max-height: 400px;
   border: 2px solid black;
   position: relative;
-  background-image: url('/img/mapa.png');
+  background-image: url('../img/mapa.png');
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
