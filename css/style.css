@@ -1,0 +1,578 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(1, 77, 177);
+}
+
+/* Estilos para el header con el logo y el menú de navegación */
+header {
+  background-color: #031564;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  padding: 6px 10px; 
+  text-decoration: none;
+  border-radius: 5px; /* Agrega bordes redondeados */
+  transition: background-color 0.3s ease; 
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+@media (max-width: 600px) {
+ 
+  nav ul li {
+    display: block;
+    margin: 10px 0; 
+  }
+}
+
+
+/* Estilos para el banner */
+/* Estilos para el mensaje de bienvenida debajo del banner */
+.bannerMessage {
+  font-family: "Monofett", monospace;
+  font-style: normal;;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 20px; 
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+}
+
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 95vh;
+  overflow: hidden;
+}
+
+#bannerImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 1s ease;
+}
+
+.bannerText {
+  font-family: "Rubik Distressed", system-ui;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  background-color: rgba(75, 14, 173, 0.753);
+}
+
+/* Estilos para los videojuegos */
+.videojuego {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #3a00a5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.videojuego img {
+  display: block;
+  max-width: 100px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.videojuego h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.videojuego p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.videojuego .lanzamiento {
+  font-style: italic;
+  color: #fff;
+}
+
+/* Estilos para el botón */
+/* Estilos para el botón */
+#mostrarJuegos {
+  display: block;
+  margin: 20px auto 20px; /* Agrega espacio abajo del botón */
+  max-width: 200px;
+  padding: 10px 20px;
+  background-color: #140e53;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#mostrarJuegos:hover {
+  background-color: #0300ca;
+}
+
+
+footer {
+  background-color: #00132c;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.iniciop {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #73c0ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.iniciop h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  color: #333;
+  text-transform: uppercase; 
+  text-shadow: 2px 2px 4px rgba(22, 2, 136, 0.5); 
+  line-height: 1.6; 
+}
+
+/* Modo Oscuro */
+body, header, .banner, footer, main img {
+  transition: background-color 0.5s, opacity 0.5s, filter 0.5s;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+.dark-mode header, .dark-mode .banner, .dark-mode footer {
+  background-color: #000;
+}
+
+.dark-mode main img {
+  filter: brightness(0.6); 
+}
+
+.dark-mode body, .dark-mode header, .dark-mode .banner, .dark-mode footer, .dark-mode main img {
+  filter: brightness(0.6); 
+}
+
+
+/* Estilos para el botón de modo oscuro */
+#modoOscuroBtn {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%;
+  background-color: #646464; 
+  border: none; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+
+.dark-mode #modoOscuroBtn {
+  background-color: #2e2e2e; 
+}
+
+
+
+/*JUEGOS*/
+
+
+
+
+  /* Estilos para el catálogo */
+  .filter-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .filter-container input[type="text"],
+  .filter-container select {
+    width: 45%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .filter-container select {
+    border-radius: 5px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .game-card {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .game-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .game-card:hover .game-description {
+    opacity: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* Estilos para el formulario de agregar juego */
+#addGameForm {
+  margin-top: 20px;
+  text-align: center; 
+}
+
+#gameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 15px solid #170469; 
+  border-radius: 10px; /
+}
+
+#gameForm label {
+  margin-bottom: 5px;
+}
+
+#gameForm input[type="text"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#gameForm button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#gameForm button:hover {
+  background-color: #0056b3;
+}
+
+.game-image {
+  width: 100%; 
+  height: 200px; 
+  overflow: hidden; 
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px;
+}
+
+.game-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+#successMessage {
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: green;
+}
+
+
+#addGameForm h2 {
+  font-size: 24px; 
+  color: #333;
+  background-color: #ffffff; 
+  padding: 10px 20px; 
+  border-bottom: 2px solid #ffffff; 
+  border-radius: 10px 10px 0 0; 
+}
+#gameForm label {
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: 18px; 
+  color: #ffffff; 
+  margin-bottom: 5px; 
+}
+
+
+
+
+
+/*contacto*/
+.contact-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-container li {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.contact-container a {
+  text-decoration: none;
+  color: #333;
+  display: flex; 
+  align-items: center; 
+}
+
+.contact-container .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.contact-container .text {
+  font-size: 18px;
+}
+
+
+
+.containerjuego {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.containerjuego h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.containerjuego .options button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.containerjuego #result {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.containeradivinanza {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 40%;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #b32b6a;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #350312;
+  color: #fff;
+  border: 2px solid #ff0000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #003bb9;
+  border-color: #025f06;
+}
+
+#gameArea {
+  width: 80vw;
+  height: 80vw;
+  max-width: 400px;
+  max-height: 400px;
+  border: 2px solid black;
+  position: relative;
+  background-image: url('/img/mapa.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+#player {
+  width: 50px;
+  height: 50px;
+  background-image: url('/img/player.png');
+  background-size: cover;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+}
+
+.object {
+  width: 30px;
+  height: 30px;
+  background-image: url('/img/gemas.png');
+  background-size: cover;
+  position: absolute;
+}
+
+#scoreboard {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  margin: 20px auto;
+}
+
+#score {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  #gameArea {
+    width: 90vw;
+    height: 90vw;
+  }
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scoreContainer {
+  margin-top: 20px;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon i {
+  color: #333;
+  font-size: 20px;
+}
+
+.social-icon:hover {
+  background-color: #ccc;
+}
