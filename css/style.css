@@ -499,7 +499,7 @@ button:hover {
 #player {
   width: 50px;
   height: 50px;
-  background-image: url('/img/player.png');
+  background-image: url('../img/player.png');
   background-size: cover;
   position: absolute;
   top: 0; 
@@ -509,7 +509,7 @@ button:hover {
 .object {
   width: 30px;
   height: 30px;
-  background-image: url('/img/gemas.png');
+  background-image: url('../img/gemas.png');
   background-size: cover;
   position: absolute;
 }
