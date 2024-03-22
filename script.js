@@ -68,25 +68,25 @@ var videojuegos = [
     nombre: "Resident Evil 5",
     descripcion: "Resident Evil 5 es un videojuego de acción y terror desarrollado y publicado por Capcom. Es la séptima entrega principal de la serie Resident Evil.",
     lanzamiento: "5 de marzo de 2009",
-    imagen: "../img/3333.webp" // Cambiar la ruta de la imagen si es necesario
+    imagen: "./img/3333.webp" // Cambiar la ruta de la imagen si es necesario
   },
   {
     nombre: "Shadow Of The Colossus",
     descripcion: "Shadow of the Colossus es un videojuego de acción y aventuras desarrollado por Team Ico y publicado por Sony Computer Entertainment.",
     lanzamiento: "18 de octubre de 2005",
-    imagen: "../img/6666.jpg" // Cambiar la ruta de la imagen si es necesario
+    imagen: "./img/6666.jpg" // Cambiar la ruta de la imagen si es necesario
   },
   {
     nombre: "Fallout 4",
     descripcion: "Fallout 4 es un juego de rol de acción desarrollado por Bethesda Game Studios y publicado por Bethesda Softworks.",
     lanzamiento: "10 de noviembre de 2015",
-    imagen: "../img/22.png" // Cambiar la ruta de la imagen si es necesario
+    imagen: "./img/22.png" // Cambiar la ruta de la imagen si es necesario
   },
   {
     nombre: "Life Is Strange",
     descripcion: "Life is Strange es un videojuego de aventura desarrollado por Dontnod Entertainment y publicado por Square Enix. ",
     lanzamiento: "30 de enero de 2015",
-    imagen: "../img/55.png" // Cambiar la ruta de la imagen si es necesario
+    imagen: "./img/55.png" // Cambiar la ruta de la imagen si es necesario
   },
  
   // Puedes agregar más juegos aquí
