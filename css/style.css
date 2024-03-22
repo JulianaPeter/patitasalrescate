@@ -509,7 +509,7 @@ button:hover {
 .object {
   width: 30px;
   height: 30px;
-  background-image: url('/img/gemas.png');
+  background-image: url('../img/gemas.png');
   background-size: cover;
   position: absolute;
 }
