@@ -483,6 +483,35 @@ button:hover {
   border-color: #025f06;
 }
 
+.contact-container,
+.containerjuego,
+.containeradivinanza {
+  width: 100%; 
+  max-width: 600px; 
+  margin: 30px auto; 
+  padding: 20px; 
+  box-sizing: border-box; 
+  overflow: auto; 
+}
+
+
+@media only screen and (max-width: 768px) {
+  .contact-container,
+  .containerjuego,
+  .containeradivinanza {
+    width: 90%; 
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .contact-container,
+  .containerjuego,
+  .containeradivinanza {
+    width: 95%; 
+  }
+}
+
 #gameArea {
   width: 80vw;
   height: 80vw;
@@ -490,7 +519,7 @@ button:hover {
   max-height: 400px;
   border: 2px solid black;
   position: relative;
-  background-image: url('../img/mapa.png');
+  background-image: url('/img/mapa.png');
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
@@ -499,7 +528,7 @@ button:hover {
 #player {
   width: 50px;
   height: 50px;
-  background-image: url('../img/player.png');
+  background-image: url('/img/player.png');
   background-size: cover;
   position: absolute;
   top: 0; 
@@ -509,7 +538,7 @@ button:hover {
 .object {
   width: 30px;
   height: 30px;
-  background-image: url('../img/gemas.png');
+  background-image: url('/img/gemas.png');
   background-size: cover;
   position: absolute;
 }
